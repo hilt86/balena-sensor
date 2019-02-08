@@ -1,0 +1,12 @@
+ version: '2'
+ volumes:
+   resin-data:
+ services:
+   packetbeat:
+    build: ./packetbeat
+    network_mode: host
+    privileged: true
+   metricbeat:
+    build: ./metricbeat
+    network_mode: host
+    privileged: true
